@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #121212;
+    color: #fff;
+}
+
+.game-container {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+#game-canvas {
+    border: 2px solid #4CAF50;
+    background-color: #000;
+    display: block;
+    margin: 0 auto;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.mobile-controls {
+    display: none;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arrow-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    margin: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mobile-controls {
+        display: flex;
+    }
+    
+    #game-canvas {
+        width: 100%;
+        height: auto;
+    }
+}
+
+#game-canvas {
+    /* Añade esto: */
+    touch-action: none; /* Evita scrolling en móviles */
+    background-color: #000 !important;
+}
